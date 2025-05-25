@@ -3,6 +3,7 @@ Server Notes
 Directory Structure
 server/
 ├── CMakeLists.txt          # Server build configuration
+├── build/
 ├── echatserv.config        # Peer server list
 ├── admin.key               # Master admin key file (store securely)
 ├── cert.pem                # TLS certificate
@@ -20,5 +21,26 @@ server/
 ├── SyncService.cpp
 └── AdminConsole.h
     └── AdminConsole.cpp
+
+
+Console Notes
+
+Directory structure
+client/
+├── CMakeLists.txt
+├── build/
+├── main.cpp
+├── LoginDialog.h
+├── LoginDialog.cpp
+├── MainWindow.h
+├── MainWindow.cpp
+├── NetworkClient.h
+├── NetworkClient.cpp
+├── Crypto.h
+├── Crypto.cpp
+├── Storage.h
+├── Storage.cpp
+└── config_echat/
+    └── echatclient.config
 
    

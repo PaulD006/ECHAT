@@ -1,3 +1,0 @@
-/Users/paul/ENCCHAT/server/build/CMakeFiles/echatserver.dir
-/Users/paul/ENCCHAT/server/build/CMakeFiles/edit_cache.dir
-/Users/paul/ENCCHAT/server/build/CMakeFiles/rebuild_cache.dir

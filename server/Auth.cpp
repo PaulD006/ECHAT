@@ -6,7 +6,10 @@
 #include <stdexcept>
 #include <sstream>
 #include <iomanip>
+#include <string>
+#include <vector>
 
+static std::vector<unsigned char> fromHex(const std::string& hex);
 static std::unordered_set<std::string> validCodes;
 static std::mutex codeMutex;
 
@@ -19,15 +22,7 @@ static std::string toHex(const unsigned char* buf, size_t len) {
 }
 
 // Helper: hex-decode into a vector
-static std::vector<unsigned char> fromHex(const std::string& hex) {
-    std::vector<unsigned char> out(hex.size()/2);
-    for(size_t i=0;i<out.size();i++){
-        unsigned int byte;
-        std::istringstream(hex.substr(2*i,2))>>std::hex>>byte;
-        out[i]=static_cast<unsigned char>(byte);
-    }
-    return out;
-}
+static std::vector<unsigned char> fromHex(const std::string& hex);
 
 std::string Auth::hashPassword(const std::string& pwd) {
     // salt 16 bytes
@@ -80,4 +75,18 @@ void Auth::invalidateRegCode(const std::string& /*code*/) {
 void Auth::addRegCode(const std::string& code) {
     std::lock_guard<std::mutex> lg(codeMutex);
     validCodes.insert(code);
+}
+
+static std::vector<unsigned char> fromHex(const std::string& hex) {
+    std::vector<unsigned char> out;
+    out.reserve(hex.length() / 2);
+
+    for (size_t i = 0; i < hex.length(); i += 2) {
+        unsigned int byte = 0;
+        // convert each two-char chunk of hex into a byte
+        std::istringstream(hex.substr(i, 2)) >> std::hex >> byte;
+        out.push_back(static_cast<unsigned char>(byte));
+    }
+
+    return out;
 }
