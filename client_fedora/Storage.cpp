@@ -1,165 +1,153 @@
 #include "Storage.h"
 #include <QDir>
 #include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QStandardPaths>
 #include <QSettings>
-#include <QJsonDocument>
-#include <QJsonArray>
-#include <QJsonObject>
-#include "Crypto.h"
-
-
-static QString s_baseDir;
-
-
-
-static QString configDir() {
-    return QDir::homePath() + "/config_echat";
-}
 
 namespace Storage {
 
-    QString exportContact(const QString& peerUser) {
-        // ensure contacts folder exists
-        QDir dir(configDir() + "/contacts");
-        dir.mkpath(".");
+// Helper: base configuration directory
+static QString configDir() {
+    // or use QStandardPaths::writableLocation(...)
+    return QDir::homePath() + "/config_echat";
+}
 
-        // path for the new .contact
-        QString path = dir.filePath(peerUser + ".contact");
+// Initialize (if needed)
+void init(const QString &baseDir) {
+    Q_UNUSED(baseDir);
+    QDir dir(configDir());
+    dir.mkpath(".");
+}
 
-        // grab the raw AES key you generated earlier:
-        QByteArray aesKey = getConversationKey(peerUser);
+// Simple INI-style config loader/saver
+QString loadConfig(const QString &path,
+                   const QString &group,
+                   const QString &key)
+{
+    QSettings settings(path, QSettings::IniFormat);
+    settings.beginGroup(group);
+    QString value = settings.value(key).toString();
+    settings.endGroup();
+    return value;
+}
 
-        // write JSON { "user": "...", "key": "<hex>" }
-        QJsonObject obj;
-        obj["user"] = peerUser;
-        obj["key"]  = QString(aesKey.toHex());
-        QFile f(path);
-        f.open(QIODevice::WriteOnly);
+void saveConfig(const QString &path,
+                const QString &group,
+                const QString &key,
+                const QString &value)
+{
+    QSettings settings(path, QSettings::IniFormat);
+    settings.beginGroup(group);
+    settings.setValue(key, value);
+    settings.endGroup();
+}
+
+// Contact list persistence
+std::vector<Contact> loadContacts() {
+    QString fn = configDir() + "/contacts.json";
+    QFile f(fn);
+    std::vector<Contact> out;
+    if(!f.open(QIODevice::ReadOnly)) return out;
+    auto doc = QJsonDocument::fromJson(f.readAll());
+    f.close();
+    auto arr = doc.array();
+    for(auto v : arr) {
+        auto obj = v.toObject();
+        Contact c;
+        c.username = obj["user"].toString();
+        out.push_back(c);
+    }
+    return out;
+}
+
+void saveContacts(const std::vector<Contact> &contacts) {
+    QString fn = configDir() + "/contacts.json";
+    QJsonArray arr;
+    for(auto &c : contacts) {
+        QJsonObject o;
+        o["user"] = c.username;
+        arr.append(o);
+    }
+    QJsonDocument doc(arr);
+    QFile f(fn);
+    if(f.open(QIODevice::WriteOnly)) {
+        f.write(doc.toJson());
+        f.close();
+    }
+}
+
+// Chat history at rest (encrypted on client side)
+void appendHistory(const QString &user, const QByteArray &plain) {
+    QString dir = configDir() + "/history";
+    QDir().mkpath(dir);
+    QString fn = dir + "/" + user + ".log";
+    QFile f(fn);
+    if(f.open(QIODevice::Append)) {
+        f.write(plain);
+        f.write("\n");
+        f.close();
+    }
+}
+
+// AES key storage
+QByteArray getConversationKey(const QString &user) {
+    QString fn = configDir() + "/keys/" + user + ".key";
+    QFile f(fn);
+    if(!f.open(QIODevice::ReadOnly))
+        return {};
+    auto data = f.readAll();
+    f.close();
+    return data;
+}
+
+void saveConversationKey(const QString &peerUser, const QByteArray &key) {
+    QString dir = configDir() + "/keys";
+    QDir().mkpath(dir);
+    QString fn = dir + "/" + peerUser + ".key";
+    QFile f(fn);
+    if(f.open(QIODevice::WriteOnly)) {
+        f.write(key);
+        f.close();
+    }
+}
+
+// Contact exchange
+QString exportContact(const QString& peerUser) {
+    QString dir = configDir() + "/contacts";
+    QDir().mkpath(dir);
+    QString path = dir + "/" + peerUser + ".contact";
+
+    QByteArray aesKey = getConversationKey(peerUser);
+
+    QJsonObject obj;
+    obj["user"] = peerUser;
+    obj["key"]  = QString(aesKey.toHex());
+    QFile f(path);
+    if(f.open(QIODevice::WriteOnly)) {
         f.write(QJsonDocument(obj).toJson());
         f.close();
+    }
+    return path;
+}
 
-        return path;
-    }
-
-    QString importContact(const QString& filename) {
-        QFile f(filename);
-        if (!f.open(QIODevice::ReadOnly)) return QString();
-        auto doc = QJsonDocument::fromJson(f.readAll());
-        f.close();
-
-        auto obj = doc.object();
-        QString peer = obj["user"].toString();
-        QByteArray key = QByteArray::fromHex(obj["key"].toString().toUtf8());
-
-        // store that key for later chats:
-        saveConversationKey(peer, key);
-
-        return peer;
-    }
-
-
-
-    /// Saves the raw AES key for peerUser into config_echat/keys/peerUser.key
-    void saveConversationKey(const QString &peerUser, const QByteArray &key) {
-        QDir dir(configDir() + "/keys");
-        dir.mkpath(".");
-        QString path = dir.filePath(peerUser + ".key");
-        QFile f(path);
-        if (f.open(QIODevice::WriteOnly)) {
-            f.write(key);
-            f.close();
-        }
-    }
-    
-    void Storage::init(const QString &baseDir) {
-        s_baseDir = baseDir;
-        QDir d;
-        if(!d.exists(baseDir)) d.mkpath(baseDir);
-        if(!d.exists(baseDir + "/history")) d.mkpath(baseDir + "/history");
-        if(!d.exists(baseDir + "/contacts.json")) {
-            QFile f(baseDir + "/contacts.json");
-            f.open(QIODevice::WriteOnly);
-            f.write("{\"contacts\":[]}");
-            f.close();
-        }
-    }
-    
-    QString Storage::loadConfig(const QString &path, const QString &group, const QString &key) {
-        QSettings s(path, QSettings::IniFormat);
-        s.beginGroup(group);
-        auto v = s.value(key).toString();
-        s.endGroup();
-        return v;
-    }
-    
-    void Storage::saveConfig(const QString &path, const QString &group, const QString &key, const QString &value) {
-        QSettings s(path, QSettings::IniFormat);
-        s.beginGroup(group);
-        s.setValue(key, value);
-        s.endGroup();
-    }
-    
-    std::vector<Contact> Storage::loadContacts() {
-        QFile f(s_baseDir + "/contacts.json");
-        std::vector<Contact> out;
-        if(!f.open(QIODevice::ReadOnly)) return out;
-        auto doc = QJsonDocument::fromJson(f.readAll());
-        f.close();
-        auto arr = doc.object()["contacts"].toArray();
-        for(auto v : arr) {
-            auto o = v.toObject();
-            Contact c;
-            c.username = o["user"].toString();
-            c.publicKeyPem = o["pub"].toString();
-            c.conversationKey = QByteArray::fromBase64(o["key"].toString().toLatin1());
-            out.push_back(c);
-        }
-        return out;
-    }
-    
-    void Storage::saveContacts(const std::vector<Contact> &contacts) {
-        QJsonArray arr;
-        for(auto &c : contacts) {
-            QJsonObject o;
-            o["user"] = c.username;
-            o["pub"]  = c.publicKeyPem;
-            o["key"]  = QString::fromLatin1(c.conversationKey.toBase64());
-            arr.append(o);
-        }
-        QJsonObject root;
-        root["contacts"] = arr;
-        QJsonDocument doc(root);
-        QFile f(s_baseDir + "/contacts.json");
-        if(f.open(QIODevice::WriteOnly)) {
-            f.write(doc.toJson());
-            f.close();
-        }
-    }
-    
-    void Storage::appendHistory(const QString &user, const QByteArray &plain) {
-        QFile f(s_baseDir + "/history/" + user + ".log");
-        if(f.open(QIODevice::Append)) {
-            f.write(plain + "\\n");
-            f.close();
-        }
-    }
-    
-    QByteArray Storage::getConversationKey(const QString &user) {
-        auto contacts = loadContacts();
-        for(auto &c : contacts)
-            if(c.username == user)
-                return c.conversationKey;
-        // not found: generate a random new key?
-        auto key = Crypto::generateRandom(32);
-        return key;
-    }
-    
-    QString Storage::getContactPublicKey(const QString &user) {
-        auto contacts = loadContacts();
-        for(auto &c : contacts)
-            if(c.username == user)
-                return c.publicKeyPem;
+QString importContact(const QString& filename) {
+    QFile f(filename);
+    if(!f.open(QIODevice::ReadOnly))
         return {};
-    }
-    }   
+    auto doc = QJsonDocument::fromJson(f.readAll());
+    f.close();
+    auto obj  = doc.object();
+    QString peer = obj["user"].toString();
+    QByteArray key = QByteArray::fromHex(obj["key"].toString().toUtf8());
+    saveConversationKey(peer, key);
+    return peer;
+}
+
+QString getContactPublicKey(const QString &user) {
+    QString fn = configDir() + "/contacts/" + user + ".pub.pem";
+    return fn;
+}
+
+} // namespace Storage
