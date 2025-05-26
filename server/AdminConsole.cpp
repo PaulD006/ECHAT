@@ -71,10 +71,11 @@ void AdminConsole::run() {
             Auth::addRegCode(code);
             std::cout<<"New code: "<<code<<"\n";
         }
-        else if(cmd=="list_codes") {
-            std::lock_guard<std::mutex> lg(codeMutex);
-            std::cout<<"Codes:\n";
-            for(auto &c: validCodes) std::cout<<"  "<<c<<"\n";
+        else if (cmd == "list_codes") {
+            auto codes = Auth::listCodes();
+            std::cout << "Codes:\n";
+            for (auto &c : codes)
+            std::cout << "  " << c << "\n";
         }
         else if(cmd=="list_users") {
             auto users = UserDB::instance().listUsers();

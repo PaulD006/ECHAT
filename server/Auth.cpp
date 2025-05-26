@@ -98,6 +98,22 @@ void Auth::addRegCode(const std::string& code) {
     persistCode(code);
 }
 
+void Auth::loadCodes() {
+    std::lock_guard<std::mutex> lg(codeMutex);
+    validCodes.clear();
+    std::ifstream in(regCodeFile);
+    std::string line;
+    while (std::getline(in, line)) {
+        if (line.empty() || line[0] == '#') continue;
+        validCodes.insert(line);
+    }
+}
+
+std::vector<std::string> Auth::listCodes() {
+    std::lock_guard<std::mutex> lg(codeMutex);
+    return { validCodes.begin(), validCodes.end() };
+}
+
 static std::vector<unsigned char> fromHex(const std::string& hex) {
     std::vector<unsigned char> out;
     out.reserve(hex.length() / 2);

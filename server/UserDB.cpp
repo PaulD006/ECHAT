@@ -54,3 +54,7 @@ void UserDB::mergeUser(const UserRecord& rec) {
         std::cout<<"[UserDB] Merged user: "<<rec.username<<"\n";
     }
 }
+
+std::vector<UserRecord> UserDB::listUsers() {
+    return getAllUsers();
+}

@@ -1,6 +1,7 @@
 #include "ServerApp.h"
 #include "HttpRegistration.h"
 #include "SyncService.h"
+#include "Auth.h"
 #include "AdminConsole.h"
 #include <iostream>
 #include <mutex>

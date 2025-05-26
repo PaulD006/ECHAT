@@ -3,7 +3,7 @@ project(EChatServer)
 set(CMAKE_CXX_STANDARD 17)
 
 find_package(OpenSSL REQUIRED)
-find_package(Boost REQUIRED COMPONENTS system thread filesystem)
+find_package(Boost 1.71 COMPONENTS system thread filesystem REQUIRED)
 find_package(Threads REQUIRED)
 
 include_directories(${Boost_INCLUDE_DIRS} .)
@@ -19,9 +19,8 @@ add_executable(echatserver
     ConfigUtil.cpp
 )
 
-
 target_link_libraries(echatserver
+    Boost::system Boost::thread Boost::filesystem
     OpenSSL::SSL OpenSSL::Crypto
-    ${Boost_LIBRARIES}
-    Threads::Threads
+    pthread
 )

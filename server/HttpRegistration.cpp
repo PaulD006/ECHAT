@@ -4,18 +4,15 @@
 
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
 #include <boost/asio.hpp>
 #include <boost/asio/ssl.hpp>
 
 #include <iostream>
 #include <thread>
 #include <map>
-#include "HttpRegistration.h"
-
-// Stub implementation—no per-instance config needed for registration
-void HttpRegistration::loadServerConfig(const std::string& /*configPath*/) {
-    // You can parse a config file here if you need custom interfaces/ports.
-}
+#include <sstream>
 
 namespace beast = boost::beast;
 namespace http  = beast::http;
@@ -24,6 +21,11 @@ namespace ssl   = asio::ssl;
 using tcp       = asio::ip::tcp;
 
 static const unsigned short PORT = 8443;
+// Stub: we don’t currently have per‐instance config for registration.
+// This will be called by ServerApp::loadConfig(), so we need an empty implementation.
+void HttpRegistration::loadServerConfig(const std::string& /*configPath*/) {
+    // no‐op for now
+}
 
 void HttpRegistration::start() {
     std::thread([](){
@@ -35,52 +37,83 @@ void HttpRegistration::start() {
 
             tcp::acceptor acceptor{ioc, {tcp::v4(), PORT}};
             while(true) {
-                // Allocate the SSL stream on the heap
                 auto stream = std::make_shared<ssl::stream<tcp::socket>>(ioc, ctx);
-
-                // Accept into the underlying socket
                 acceptor.accept(stream->next_layer());
-
-                // Handle the session
                 std::thread([stream](){
                     try {
                         stream->handshake(ssl::stream_base::server);
-
                         beast::flat_buffer buffer;
                         http::request<http::string_body> req;
                         http::read(*stream, buffer, req);
 
                         http::response<http::string_body> res;
 
-                        if(req.method() == http::verb::get) {
+                        // ---- JSON-POST login ----
+                        if(req.method() == http::verb::post &&
+                           req[http::field::content_type] == "application/json")
+                        {
+                            using boost::property_tree::ptree;
+                            std::stringstream js(req.body());
+                            ptree tree;
+                            try {
+                                read_json(js, tree);
+                                std::string type = tree.get<std::string>("type");
+                                ptree resp;
+                                res.version(req.version());
+                                res.set(http::field::content_type, "application/json");
+                                if(type == "login") {
+                                    auto user = tree.get<std::string>("user");
+                                    auto pass = tree.get<std::string>("pass");
+                                    bool ok = UserDB::instance().verifyUser(user, pass);
+                                    resp.put("type",   "login_response");
+                                    resp.put("status", ok ? "ok" : "fail");
+                                    std::ostringstream out;
+                                    write_json(out, resp, false);
+                                    res.result(http::status::ok);
+                                    res.body() = out.str();
+                                } else {
+                                    res.result(http::status::bad_request);
+                                    resp.put("error","unknown type");
+                                    std::ostringstream out;
+                                    write_json(out, resp, false);
+                                    res.body() = out.str();
+                                }
+                            } catch(...) {
+                                res = http::response<http::string_body>{
+                                    http::status::bad_request, req.version()};
+                                res.set(http::field::content_type, "application/json");
+                                res.body() = R"({"error":"invalid json"})";
+                            }
+                        }
+                        // ---- Browser form GET ----
+                        else if(req.method() == http::verb::get) {
                             res.result(http::status::ok);
                             res.set(http::field::content_type, "text/html");
                             res.body() = R"(
-<html>
-  <body>
-    <h1>Register for EChat</h1>
-    <form method="POST">
-      <label>Registration Code: <input name="code"/></label><br/>
-      <label>Username: <input name="user"/></label><br/>
-      <label>Password: <input type="password" name="pwd"/></label><br/>
-      <button type="submit">Register</button>
-    </form>
-  </body>
-</html>
+<html><body>
+<h1>Register</h1>
+<form method="POST">
+  Code: <input name="code"><br>
+  Username: <input name="user"><br>
+  Password: <input type="password" name="pwd"><br>
+  <button type="submit">Submit</button>
+</form>
+</body></html>
 )";
                         }
+                        // ---- Browser form POST ----
                         else if(req.method() == http::verb::post) {
-                            // parse application/x-www-form-urlencoded
+                            // parse x-www-form-urlencoded
                             std::map<std::string,std::string> params;
-                            std::string body = req.body();
+                            auto body = req.body();
                             size_t pos = 0;
                             while(pos < body.size()) {
-                                auto eq = body.find('=', pos);
+                                auto eq  = body.find('=', pos);
                                 auto amp = body.find('&', pos);
-                                if(eq == std::string::npos) break;
-                                std::string key = body.substr(pos, eq-pos);
+                                if(eq==std::string::npos) break;
+                                auto key = body.substr(pos, eq-pos);
                                 std::string val;
-                                if(amp == std::string::npos) {
+                                if(amp==std::string::npos) {
                                     val = body.substr(eq+1);
                                     pos = body.size();
                                 } else {
@@ -89,39 +122,39 @@ void HttpRegistration::start() {
                                 }
                                 params[key] = val;
                             }
-
-                            auto it_code = params.find("code");
-                            auto it_user = params.find("user");
-                            auto it_pwd  = params.find("pwd");
-                            if(it_code!=params.end() && it_user!=params.end() && it_pwd!=params.end()
-                               && Auth::validateRegCode(it_code->second)) {
-                                auto hash = Auth::hashPassword(it_pwd->second);
-                                UserDB::instance().addUser(it_user->second, hash);
+                            auto c= params.find("code"), u=params.find("user"), p=params.find("pwd");
+                            if(c!=params.end() && u!=params.end() && p!=params.end() &&
+                               Auth::validateRegCode(c->second))
+                            {
+                                auto hash = Auth::hashPassword(p->second);
+                                UserDB::instance().addUser(u->second, hash);
                                 res.result(http::status::ok);
                                 res.set(http::field::content_type, "text/html");
                                 res.body() = "<html><body><h2>Registration successful!</h2></body></html>";
                             } else {
-                                res.result(http::status::bad_request);
+                                res = http::response<http::string_body>{
+                                    http::status::bad_request, req.version()};
                                 res.set(http::field::content_type, "text/html");
-                                res.body() = "<html><body><h2>Invalid registration code or data.</h2></body></html>";
+                                res.body() = "<html><body><h2>Invalid registration.</h2></body></html>";
                             }
                         }
                         else {
-                            res.result(http::status::method_not_allowed);
+                            res = http::response<http::string_body>{
+                                http::status::method_not_allowed, req.version()};
                             res.set(http::field::content_type, "text/html");
-                            res.body() = "<html><body><h2>Only GET and POST supported.</h2></body></html>";
+                            res.body() = "<html><body><h2>Only GET, POST supported.</h2></body></html>";
                         }
 
                         res.content_length(res.body().size());
                         http::write(*stream, res);
                     }
                     catch(const std::exception& e) {
-                        std::cerr << "Registration handler error: " << e.what() << "\n";
+                        std::cerr << "Handler error: " << e.what() << "\n";
                     }
                 }).detach();
             }
         } catch(const std::exception& e) {
-            std::cerr << "Registration service error: " << e.what() << "\n";
+            std::cerr << "Service error: " << e.what() << "\n";
         }
     }).detach();
 }
