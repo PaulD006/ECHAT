@@ -7,6 +7,12 @@
 #include <QHBoxLayout>
 #include "Crypto.h"
 #include "Storage.h"
+#include <QMenuBar>
+#include <QAction>
+#include <QFileDialog>
+#include <QApplication>
+#include <QInputDialog>
+#include <QCoreApplication>
 
 MainWindow::MainWindow(NetworkClient *client, QWidget *parent)
  : QMainWindow(parent), m_client(client)
@@ -16,6 +22,16 @@ MainWindow::MainWindow(NetworkClient *client, QWidget *parent)
 
     auto *central = new QWidget;
     auto *layout = new QHBoxLayout(central);
+    auto *mbar = menuBar();
+// File Menue
+    auto *fileMenu = mbar->addMenu(tr("&File"));
+    fileMenu->addAction(tr("E&xit"), qApp, &QCoreApplication::quit);
+
+
+// Contacts Menu
+    auto *contactsMenu = mbar->addMenu(tr("&Contacts"));
+    contactsMenu->addAction(tr("&New Contact…"),    this, &MainWindow::onNewContact);
+    contactsMenu->addAction(tr("&Import Contact…"), this, &MainWindow::onImportContact);
 
     m_contactList = new QListWidget;
     layout->addWidget(m_contactList);
@@ -34,10 +50,9 @@ MainWindow::MainWindow(NetworkClient *client, QWidget *parent)
     layout->addLayout(chatLayout);
     setCentralWidget(central);
 
-    // Load contacts
-    auto contacts = Storage::loadContacts();
-    for(auto &c : contacts) {
-        m_contactList->addItem(c.username);
+    // Load existing contacts
+    for(auto &cinfo : Storage::loadContacts()) {
+        m_contactList->addItem(cinfo.username);
     }
 
     connect(m_sendBtn, &QPushButton::clicked, this, &MainWindow::onSendClicked);
@@ -77,4 +92,32 @@ void MainWindow::onIncoming(const QString &from, const QByteArray &data) {
     QString txt = QString::fromUtf8(plain);
     m_chatView->append(QString("%1: %2").arg(from, txt));
     Storage::appendHistory(from, plain);
+}
+
+// Slot: create & export a new contact file for peer "userId"
+void MainWindow::onNewContact() {
+    auto userId = QInputDialog::getText(this,
+                    tr("New Contact"), tr("User ID:"));
+    if(userId.isEmpty()) return;
+
+    // this writes a .contact file into your config dir and returns its path
+    QString path = Storage::exportContact(userId);
+    QString filename = QFileDialog::getSaveFileName(
+          this, tr("Save Contact File"), userId + ".contact",
+          tr("Contact Files (*.contact)"));
+    if(!filename.isEmpty())
+        QFile::copy(path, filename);
+}
+
+// Slot: import a .contact file and add to our list
+void MainWindow::onImportContact() {
+    QString filename = QFileDialog::getOpenFileName(
+          this, tr("Import Contact File"),
+          QString(), tr("Contact Files (*.contact)"));
+    if(filename.isEmpty()) return;
+
+    // returns the imported username, or empty if invalid
+    QString peer = Storage::importContact(filename);
+    if(!peer.isEmpty())
+        m_contactList->addItem(peer);
 }

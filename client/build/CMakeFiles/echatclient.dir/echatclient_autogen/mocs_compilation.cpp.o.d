@@ -1151,4 +1151,22 @@ CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
   /usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /usr/local/include/QtWidgets/qtabwidget.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QListWidget \
+  /usr/local/lib/QtWidgets.framework/Headers/qlistwidget.h \
+  /usr/local/include/QtWidgets/qlistview.h \
+  /usr/local/include/QtWidgets/qabstractitemview.h \
+  /usr/local/include/QtWidgets/qabstractscrollarea.h \
+  /usr/local/include/QtWidgets/qframe.h \
+  /usr/local/include/QtCore/qabstractitemmodel.h \
+  /usr/local/include/QtCore/qitemselectionmodel.h \
+  /usr/local/include/QtWidgets/qabstractitemdelegate.h \
+  /usr/local/include/QtWidgets/qstyleoption.h \
+  /usr/local/include/QtWidgets/qabstractspinbox.h \
+  /usr/local/include/QtGui/qvalidator.h \
+  /usr/local/include/QtCore/qregularexpression.h \
+  /usr/local/include/QtWidgets/qslider.h \
+  /usr/local/include/QtWidgets/qabstractslider.h \
+  /usr/local/include/QtWidgets/qstyle.h \
+  /usr/local/include/QtWidgets/qtabbar.h \
+  /usr/local/include/QtWidgets/qrubberband.h \
   /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/EWIEGA46WW/moc_NetworkClient.cpp

@@ -1119,6 +1119,25 @@ CMakeFiles/echatclient.dir/MainWindow.cpp.o: \
   /usr/local/include/QtWidgets/qsizepolicy.h \
   /usr/local/include/QtGui/qcursor.h /usr/local/include/QtGui/qbitmap.h \
   /usr/local/include/QtWidgets/qtabwidget.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QListWidget \
+  /usr/local/lib/QtWidgets.framework/Headers/qlistwidget.h \
+  /usr/local/include/QtWidgets/qlistview.h \
+  /usr/local/include/QtWidgets/qabstractitemview.h \
+  /usr/local/include/QtWidgets/qabstractscrollarea.h \
+  /usr/local/include/QtWidgets/qframe.h \
+  /usr/local/include/QtCore/qabstractitemmodel.h \
+  /usr/local/include/QtCore/qitemselectionmodel.h \
+  /usr/local/include/QtWidgets/qabstractitemdelegate.h \
+  /usr/local/include/QtWidgets/qstyleoption.h \
+  /usr/local/include/QtCore/qlocale.h \
+  /usr/local/include/QtWidgets/qabstractspinbox.h \
+  /usr/local/include/QtGui/qvalidator.h \
+  /usr/local/include/QtCore/qregularexpression.h \
+  /usr/local/include/QtWidgets/qslider.h \
+  /usr/local/include/QtWidgets/qabstractslider.h \
+  /usr/local/include/QtWidgets/qstyle.h \
+  /usr/local/include/QtWidgets/qtabbar.h \
+  /usr/local/include/QtWidgets/qrubberband.h \
   /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.h \
   /usr/local/lib/QtCore.framework/Headers/QObject \
   /usr/local/lib/QtCore.framework/Headers/qobject.h \
@@ -1136,30 +1155,11 @@ CMakeFiles/echatclient.dir/MainWindow.cpp.o: \
   /usr/local/include/QtCore/qcryptographichash.h \
   /usr/local/include/QtCore/qdatetime.h \
   /usr/local/include/QtCore/qcalendar.h \
-  /usr/local/include/QtCore/qlocale.h \
   /usr/local/include/QtNetwork/qssl.h /usr/local/include/QtCore/QFlags \
   /usr/local/lib/QtCore.framework/Headers/QString \
   /usr/local/lib/QtCore.framework/Headers/qstring.h \
   /usr/local/lib/QtCore.framework/Headers/QByteArray \
   /usr/local/lib/QtCore.framework/Headers/qbytearray.h \
-  /usr/local/lib/QtWidgets.framework/Headers/QListWidget \
-  /usr/local/lib/QtWidgets.framework/Headers/qlistwidget.h \
-  /usr/local/include/QtWidgets/qlistview.h \
-  /usr/local/include/QtWidgets/qabstractitemview.h \
-  /usr/local/include/QtWidgets/qabstractscrollarea.h \
-  /usr/local/include/QtWidgets/qframe.h \
-  /usr/local/include/QtCore/qabstractitemmodel.h \
-  /usr/local/include/QtCore/qitemselectionmodel.h \
-  /usr/local/include/QtWidgets/qabstractitemdelegate.h \
-  /usr/local/include/QtWidgets/qstyleoption.h \
-  /usr/local/include/QtWidgets/qabstractspinbox.h \
-  /usr/local/include/QtGui/qvalidator.h \
-  /usr/local/include/QtCore/qregularexpression.h \
-  /usr/local/include/QtWidgets/qslider.h \
-  /usr/local/include/QtWidgets/qabstractslider.h \
-  /usr/local/include/QtWidgets/qstyle.h \
-  /usr/local/include/QtWidgets/qtabbar.h \
-  /usr/local/include/QtWidgets/qrubberband.h \
   /usr/local/lib/QtWidgets.framework/Headers/QTextEdit \
   /usr/local/lib/QtWidgets.framework/Headers/qtextedit.h \
   /usr/local/include/QtGui/qtextdocument.h \
@@ -1180,4 +1180,82 @@ CMakeFiles/echatclient.dir/MainWindow.cpp.o: \
   /usr/local/include/QtWidgets/qgridlayout.h \
   /usr/local/lib/QtWidgets.framework/Headers/QHBoxLayout \
   /Users/paul/ENCCHAT/ECHAT/client/Crypto.h \
-  /Users/paul/ENCCHAT/ECHAT/client/Storage.h
+  /Users/paul/ENCCHAT/ECHAT/client/Storage.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QMenuBar \
+  /usr/local/lib/QtWidgets.framework/Headers/qmenubar.h \
+  /usr/local/include/QtWidgets/qmenu.h \
+  /usr/local/lib/QtGui.framework/Headers/QAction \
+  /usr/local/lib/QtGui.framework/Headers/qaction.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QFileDialog \
+  /usr/local/lib/QtWidgets.framework/Headers/qfiledialog.h \
+  /usr/local/include/QtCore/qdir.h \
+  /usr/local/include/QtCore/qdirlisting.h \
+  /usr/local/include/QtCore/qfiledevice.h \
+  /usr/local/include/QtCore/qfile.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/format \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/container_adaptor.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/range_default_formatter.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/range_formatter.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/format_context.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/format_arg_store.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/format_args.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/ref_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/deque \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/format_functions.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_char.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/write_escaped.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/escaped_output_table.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_floating_point.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/chars_format.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars_floating_point.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_integer.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_pointer.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_tuple.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
+  /usr/local/include/QtCore/qfileinfo.h \
+  /usr/local/include/QtCore/qtimezone.h \
+  /usr/local/include/QtWidgets/qdialog.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QApplication \
+  /usr/local/lib/QtWidgets.framework/Headers/qapplication.h \
+  /usr/local/include/QtCore/qcoreapplication.h \
+  /usr/local/include/QtCore/qcoreevent.h \
+  /usr/local/include/QtCore/qbasictimer.h \
+  /usr/local/include/QtCore/qabstracteventdispatcher.h \
+  /usr/local/include/QtCore/qeventloop.h \
+  /usr/local/include/QtCore/qdeadlinetimer.h \
+  /usr/local/include/QtCore/qelapsedtimer.h \
+  /usr/local/include/QtCore/qnativeinterface.h \
+  /usr/local/include/QtCore/qcoreapplication_platform.h \
+  /usr/local/include/QtGui/qguiapplication.h \
+  /usr/local/include/QtGui/qinputmethod.h \
+  /usr/local/include/QtGui/qguiapplication_platform.h \
+  /usr/local/lib/QtWidgets.framework/Headers/QInputDialog \
+  /usr/local/lib/QtWidgets.framework/Headers/qinputdialog.h \
+  /usr/local/include/QtWidgets/qlineedit.h \
+  /usr/local/lib/QtCore.framework/Headers/QCoreApplication \
+  /usr/local/lib/QtCore.framework/Headers/qcoreapplication.h
