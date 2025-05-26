@@ -1,5 +1,5 @@
-/Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/EWIEGA46WW/moc_NetworkClient.cpp: /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.h \
-  /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/moc_predefs.h \
+/Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/EWIEGA46WW/moc_NetworkClient.cpp: /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/AvailabilityInternalLegacy.h \

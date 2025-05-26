@@ -1,15 +1,15 @@
 {
-	"BUILD_DIR" : "/Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen",
-	"CMAKE_BINARY_DIR" : "/Users/paul/ENCCHAT/ECHAT/client/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/Users/paul/ENCCHAT/ECHAT/client/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/paul/ENCCHAT/ECHAT/client",
+	"BUILD_DIR" : "/Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/paul/ENCCHAT/ECHAT/client_mac/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/paul/ENCCHAT/ECHAT/client_mac/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/paul/ENCCHAT/ECHAT/client_mac",
 	"CMAKE_EXECUTABLE" : "/usr/local/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/Users/paul/ENCCHAT/ECHAT/client/CMakeLists.txt",
+		"/Users/paul/ENCCHAT/ECHAT/client_mac/CMakeLists.txt",
 		"/usr/local/share/cmake/Modules/CMakeDetermineSystem.cmake",
 		"/usr/local/share/cmake/Modules/CMakeSystem.cmake.in",
-		"/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/4.0.2/CMakeSystem.cmake",
+		"/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/4.0.2/CMakeSystem.cmake",
 		"/usr/local/share/cmake/Modules/CMakeUnixFindMake.cmake",
 		"/usr/local/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/usr/local/share/cmake/Modules/Platform/Darwin-Initialize.cmake",
@@ -64,7 +64,7 @@
 		"/usr/local/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake",
 		"/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake",
 		"/usr/local/share/cmake/Modules/CMakeCCompiler.cmake.in",
-		"/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/4.0.2/CMakeCCompiler.cmake",
+		"/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/4.0.2/CMakeCCompiler.cmake",
 		"/usr/local/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake",
 		"/usr/local/share/cmake/Modules/CMakeDetermineCompiler.cmake",
 		"/usr/local/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake",
@@ -114,7 +114,7 @@
 		"/usr/local/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
 		"/usr/local/share/cmake/Modules/CMakeFindBinUtils.cmake",
 		"/usr/local/share/cmake/Modules/CMakeCXXCompiler.cmake.in",
-		"/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake",
+		"/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake",
 		"/usr/local/share/cmake/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/local/share/cmake/Modules/CMakeGenericSystem.cmake",
 		"/usr/local/share/cmake/Modules/CMakeInitializeConfigs.cmake",
@@ -143,7 +143,7 @@
 		"/usr/local/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake",
 		"/usr/local/share/cmake/Modules/Internal/FeatureTesting.cmake",
 		"/usr/local/share/cmake/Modules/CMakeCCompiler.cmake.in",
-		"/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/4.0.2/CMakeCCompiler.cmake",
+		"/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/4.0.2/CMakeCCompiler.cmake",
 		"/usr/local/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake",
 		"/usr/local/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake",
 		"/usr/local/share/cmake/Modules/Linker/AppleClang-C.cmake",
@@ -172,7 +172,7 @@
 		"/usr/local/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake",
 		"/usr/local/share/cmake/Modules/Internal/FeatureTesting.cmake",
 		"/usr/local/share/cmake/Modules/CMakeCXXCompiler.cmake.in",
-		"/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake",
+		"/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake",
 		"/usr/local/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake",
 		"/usr/local/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake",
 		"/usr/local/share/cmake/Modules/Linker/AppleClang-CXX.cmake",
@@ -591,46 +591,46 @@
 		"/usr/local/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake",
 		"/usr/local/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/Users/paul/ENCCHAT/ECHAT/client",
+	"CMAKE_SOURCE_DIR" : "/Users/paul/ENCCHAT/ECHAT/client_mac",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "/Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/deps",
+	"DEP_FILE" : "/Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "echatclient_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/Users/paul/ENCCHAT/ECHAT/client/Crypto.h",
+			"/Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.h",
 			"Mu",
 			"EWIEGA46WW/moc_Crypto.cpp",
 			null
 		],
 		[
-			"/Users/paul/ENCCHAT/ECHAT/client/LoginDialog.h",
+			"/Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.h",
 			"Mu",
 			"EWIEGA46WW/moc_LoginDialog.cpp",
 			null
 		],
 		[
-			"/Users/paul/ENCCHAT/ECHAT/client/MainWindow.h",
+			"/Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.h",
 			"Mu",
 			"EWIEGA46WW/moc_MainWindow.cpp",
 			null
 		],
 		[
-			"/Users/paul/ENCCHAT/ECHAT/client/NetworkClient.h",
+			"/Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.h",
 			"Mu",
 			"EWIEGA46WW/moc_NetworkClient.cpp",
 			null
 		],
 		[
-			"/Users/paul/ENCCHAT/ECHAT/client/Storage.h",
+			"/Users/paul/ENCCHAT/ECHAT/client_mac/Storage.h",
 			"Mu",
 			"EWIEGA46WW/moc_Storage.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/include",
-	"MOC_COMPILATION_FILE" : "/Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/include",
+	"MOC_COMPILATION_FILE" : "/Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
@@ -648,8 +648,8 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/Users/paul/ENCCHAT/ECHAT/client/build",
-		"/Users/paul/ENCCHAT/ECHAT/client",
+		"/Users/paul/ENCCHAT/ECHAT/client_mac/build",
+		"/Users/paul/ENCCHAT/ECHAT/client_mac",
 		"/usr/local/lib/QtCore.framework/Headers",
 		"/usr/local/lib/QtCore.framework",
 		"/usr/local/share/qt/mkspecs/macx-clang",
@@ -686,25 +686,25 @@
 		"-E",
 		"/usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 10,
-	"PARSE_CACHE_FILE" : "/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/echatclient_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/echatclient_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/local/share/qt/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 9,
-	"SETTINGS_FILE" : "/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/echatclient_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/echatclient_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/Users/paul/ENCCHAT/ECHAT/client/Crypto.cpp", "Mu", null ],
-		[ "/Users/paul/ENCCHAT/ECHAT/client/LoginDialog.cpp", "Mu", null ],
-		[ "/Users/paul/ENCCHAT/ECHAT/client/MainWindow.cpp", "Mu", null ],
-		[ "/Users/paul/ENCCHAT/ECHAT/client/NetworkClient.cpp", "Mu", null ],
-		[ "/Users/paul/ENCCHAT/ECHAT/client/Storage.cpp", "Mu", null ],
-		[ "/Users/paul/ENCCHAT/ECHAT/client/main.cpp", "Mu", null ]
+		[ "/Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.cpp", "Mu", null ],
+		[ "/Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.cpp", "Mu", null ],
+		[ "/Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.cpp", "Mu", null ],
+		[ "/Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.cpp", "Mu", null ],
+		[ "/Users/paul/ENCCHAT/ECHAT/client_mac/Storage.cpp", "Mu", null ],
+		[ "/Users/paul/ENCCHAT/ECHAT/client_mac/main.cpp", "Mu", null ]
 	],
 	"USE_BETTER_GRAPH" : true,
 	"VERBOSITY" : 0

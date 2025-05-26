@@ -1,6 +1,6 @@
 CMakeFiles/echatclient.dir/Crypto.cpp.o: \
-  /Users/paul/ENCCHAT/ECHAT/client/Crypto.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/Crypto.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.h \
   /usr/local/lib/QtCore.framework/Headers/QString \
   /usr/local/lib/QtCore.framework/Headers/qstring.h \
   /usr/local/include/QtCore/qchar.h /usr/local/include/QtCore/qglobal.h \

@@ -892,22 +892,22 @@ echatclient_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_list.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/limits.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
-  /Users/paul/ENCCHAT/ECHAT/client/CMakeLists.txt \
-  /Users/paul/ENCCHAT/ECHAT/client/Crypto.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/Crypto.h \
-  /Users/paul/ENCCHAT/ECHAT/client/LoginDialog.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/LoginDialog.h \
-  /Users/paul/ENCCHAT/ECHAT/client/MainWindow.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/MainWindow.h \
-  /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.h \
-  /Users/paul/ENCCHAT/ECHAT/client/Storage.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/Storage.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/CMakeLists.txt \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Storage.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Storage.h \
   CMakeFiles/4.0.2/CMakeCCompiler.cmake \
   CMakeFiles/4.0.2/CMakeCXXCompiler.cmake \
   CMakeFiles/4.0.2/CMakeSystem.cmake \
   echatclient_autogen/moc_predefs.h \
-  /Users/paul/ENCCHAT/ECHAT/client/main.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/main.cpp \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QByteArray \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QFlags \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QObject \
@@ -2005,11 +2005,9 @@ echatclient_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
 
 /usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qregion.h:
 
-/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake:
-
-/usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpalette.h:
-
 /usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qimage.h:
+
+/usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qicon.h:
 
 /usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qfontmetrics.h:
 
@@ -2169,8 +2167,6 @@ echatclient_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
 
 /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qcompare.h:
 
-/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qchar.h:
-
 /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbytearrayview.h:
 
 /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qbytearray.h:
@@ -2209,25 +2205,29 @@ echatclient_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15
 
 /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QObject:
 
-/Users/paul/ENCCHAT/ECHAT/client/main.cpp:
+/Users/paul/ENCCHAT/ECHAT/client_mac/main.cpp:
 
 CMakeFiles/4.0.2/CMakeSystem.cmake:
 
-/usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qicon.h:
+/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qchar.h:
 
-/Users/paul/ENCCHAT/ECHAT/client/NetworkClient.h:
+/Users/paul/ENCCHAT/ECHAT/client_mac/Storage.h:
 
-/Users/paul/ENCCHAT/ECHAT/client/NetworkClient.cpp:
+/Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.h:
 
-/Users/paul/ENCCHAT/ECHAT/client/MainWindow.cpp:
+/Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.h:
 
-/Users/paul/ENCCHAT/ECHAT/client/LoginDialog.h:
+/Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.cpp:
 
-/Users/paul/ENCCHAT/ECHAT/client/LoginDialog.cpp:
+/Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.h:
 
-/Users/paul/ENCCHAT/ECHAT/client/Crypto.h:
+/Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.cpp:
 
-/Users/paul/ENCCHAT/ECHAT/client/CMakeLists.txt:
+/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake:
+
+/usr/local/Cellar/qt/6.9.0/lib/QtGui.framework/Versions/A/Headers/qpalette.h:
+
+/Users/paul/ENCCHAT/ECHAT/client_mac/CMakeLists.txt:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/16/include/limits.h:
 
@@ -2324,8 +2324,6 @@ CMakeFiles/4.0.2/CMakeSystem.cmake:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_pthread/_pthread_types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_pthread/_pthread_t.h:
-
-/Users/paul/ENCCHAT/ECHAT/client/Crypto.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
 
@@ -3173,6 +3171,8 @@ CMakeFiles/4.0.2/CMakeCXXCompiler.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__iterator/iterator_traits.h:
 
+/Users/paul/ENCCHAT/ECHAT/client_mac/Storage.cpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__concepts/relation.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__iterator/iterator.h:
@@ -3363,6 +3363,8 @@ echatclient_autogen/moc_predefs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h:
 
+/Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__fwd/bit_reference.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__memory/swap_allocator.h:
@@ -3535,8 +3537,6 @@ echatclient_autogen/moc_predefs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__compare/is_eq.h:
 
-/Users/paul/ENCCHAT/ECHAT/client/Storage.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/generate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__compare/ordering.h:
@@ -3628,6 +3628,8 @@ echatclient_autogen/moc_predefs.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_final.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__charconv/to_chars_result.h:
+
+/Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/remove.h:
 
@@ -4037,8 +4039,6 @@ CMakeFiles/4.0.2/CMakeCCompiler.cmake:
 
 /usr/local/share/cmake/Modules/CheckCXXCompilerFlag.cmake:
 
-/Users/paul/ENCCHAT/ECHAT/client/MainWindow.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__iterator/readable_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/all_of.h:
@@ -4301,8 +4301,6 @@ CMakeFiles/4.0.2/CMakeCCompiler.cmake:
 
 /usr/local/lib/cmake/Qt6Core/Qt6CoreTargets.cmake:
 
-/Users/paul/ENCCHAT/ECHAT/client/Storage.cpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/format_arg.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/prev_permutation.h:
@@ -4328,6 +4326,8 @@ CMakeFiles/4.0.2/CMakeCCompiler.cmake:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__condition_variable/condition_variable.h:
 
 /usr/local/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateConfigVersionImpl.cmake:
+
+/Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/half_positive.h:
 

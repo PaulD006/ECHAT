@@ -1,5 +1,5 @@
 CMakeFiles/echatclient.dir/main.cpp.o: \
-  /Users/paul/ENCCHAT/ECHAT/client/main.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/main.cpp \
   /usr/local/lib/QtWidgets.framework/Headers/QApplication \
   /usr/local/lib/QtWidgets.framework/Headers/qapplication.h \
   /usr/local/include/QtWidgets/qtwidgetsglobal.h \
@@ -1121,7 +1121,7 @@ CMakeFiles/echatclient.dir/main.cpp.o: \
   /usr/local/include/QtCore/qset.h /usr/local/include/QtCore/qhash.h \
   /usr/local/include/QtCore/qvarlengtharray.h \
   /usr/local/include/QtGui/qguiapplication_platform.h \
-  /Users/paul/ENCCHAT/ECHAT/client/LoginDialog.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.h \
   /usr/local/lib/QtWidgets.framework/Headers/QDialog \
   /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
   /usr/local/include/QtWidgets/qwidget.h \
@@ -1134,7 +1134,7 @@ CMakeFiles/echatclient.dir/main.cpp.o: \
   /usr/local/include/QtGui/qfontinfo.h \
   /usr/local/include/QtGui/qfontvariableaxis.h \
   /usr/local/include/QtWidgets/qsizepolicy.h \
-  /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.h \
   /usr/local/lib/QtCore.framework/Headers/QObject \
   /usr/local/lib/QtCore.framework/Headers/qobject.h \
   /usr/local/lib/QtNetwork.framework/Headers/QSslSocket \
@@ -1156,8 +1156,8 @@ CMakeFiles/echatclient.dir/main.cpp.o: \
   /usr/local/lib/QtCore.framework/Headers/qstring.h \
   /usr/local/lib/QtCore.framework/Headers/QByteArray \
   /usr/local/lib/QtCore.framework/Headers/qbytearray.h \
-  /Users/paul/ENCCHAT/ECHAT/client/Storage.h \
-  /Users/paul/ENCCHAT/ECHAT/client/MainWindow.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Storage.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.h \
   /usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
   /usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /usr/local/include/QtWidgets/qtabwidget.h \

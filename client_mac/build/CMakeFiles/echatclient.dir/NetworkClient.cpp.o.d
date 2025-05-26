@@ -1,6 +1,6 @@
 CMakeFiles/echatclient.dir/NetworkClient.cpp.o: \
-  /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.h \
   /usr/local/lib/QtCore.framework/Headers/QObject \
   /usr/local/lib/QtCore.framework/Headers/qobject.h \
   /usr/local/include/QtCore/qobjectdefs.h \

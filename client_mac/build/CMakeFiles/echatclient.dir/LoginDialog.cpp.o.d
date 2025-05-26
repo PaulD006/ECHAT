@@ -1,6 +1,6 @@
 CMakeFiles/echatclient.dir/LoginDialog.cpp.o: \
-  /Users/paul/ENCCHAT/ECHAT/client/LoginDialog.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/LoginDialog.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.h \
   /usr/local/lib/QtWidgets.framework/Headers/QDialog \
   /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
   /usr/local/include/QtWidgets/qtwidgetsglobal.h \
@@ -1118,7 +1118,7 @@ CMakeFiles/echatclient.dir/LoginDialog.cpp.o: \
   /usr/local/include/QtGui/qfontvariableaxis.h \
   /usr/local/include/QtWidgets/qsizepolicy.h \
   /usr/local/include/QtGui/qcursor.h /usr/local/include/QtGui/qbitmap.h \
-  /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.h \
   /usr/local/lib/QtCore.framework/Headers/QObject \
   /usr/local/lib/QtCore.framework/Headers/qobject.h \
   /usr/local/lib/QtNetwork.framework/Headers/QSslSocket \
@@ -1166,4 +1166,4 @@ CMakeFiles/echatclient.dir/LoginDialog.cpp.o: \
   /usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
   /usr/local/include/QtWidgets/qdialog.h \
   /usr/local/include/QtWidgets/qdialogbuttonbox.h \
-  /Users/paul/ENCCHAT/ECHAT/client/Storage.h
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Storage.h

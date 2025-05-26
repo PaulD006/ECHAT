@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/paul/ENCCHAT/ECHAT/client
+CMAKE_SOURCE_DIR = /Users/paul/ENCCHAT/ECHAT/client_mac
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/paul/ENCCHAT/ECHAT/client/build
+CMAKE_BINARY_DIR = /Users/paul/ENCCHAT/ECHAT/client_mac/build
 
 # Utility rule file for echatclient_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/echatclient_autogen: echatclient_autogen/timestamp
 
 echatclient_autogen/timestamp: /usr/local/share/qt/libexec/moc
 echatclient_autogen/timestamp: CMakeFiles/echatclient_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target echatclient"
-	/usr/local/bin/cmake -E cmake_autogen /Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/echatclient_autogen.dir/AutogenInfo.json ""
-	/usr/local/bin/cmake -E touch /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target echatclient"
+	/usr/local/bin/cmake -E cmake_autogen /Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/echatclient_autogen.dir/AutogenInfo.json ""
+	/usr/local/bin/cmake -E touch /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/timestamp
 
 CMakeFiles/echatclient_autogen.dir/codegen:
 .PHONY : CMakeFiles/echatclient_autogen.dir/codegen
@@ -91,6 +91,6 @@ CMakeFiles/echatclient_autogen.dir/clean:
 .PHONY : CMakeFiles/echatclient_autogen.dir/clean
 
 CMakeFiles/echatclient_autogen.dir/depend:
-	cd /Users/paul/ENCCHAT/ECHAT/client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/paul/ENCCHAT/ECHAT/client /Users/paul/ENCCHAT/ECHAT/client /Users/paul/ENCCHAT/ECHAT/client/build /Users/paul/ENCCHAT/ECHAT/client/build /Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/echatclient_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/paul/ENCCHAT/ECHAT/client_mac/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/paul/ENCCHAT/ECHAT/client_mac /Users/paul/ENCCHAT/ECHAT/client_mac /Users/paul/ENCCHAT/ECHAT/client_mac/build /Users/paul/ENCCHAT/ECHAT/client_mac/build /Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/echatclient_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/echatclient_autogen.dir/depend
 

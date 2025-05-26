@@ -1,7 +1,7 @@
 CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o: \
-  /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/mocs_compilation.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/EWIEGA46WW/moc_LoginDialog.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/EWIEGA46WW/../../../LoginDialog.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/mocs_compilation.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/EWIEGA46WW/moc_LoginDialog.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/EWIEGA46WW/../../../LoginDialog.h \
   /usr/local/lib/QtWidgets.framework/Headers/QDialog \
   /usr/local/lib/QtWidgets.framework/Headers/qdialog.h \
   /usr/local/include/QtWidgets/qtwidgetsglobal.h \
@@ -1119,7 +1119,7 @@ CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o: \
   /usr/local/include/QtGui/qfontvariableaxis.h \
   /usr/local/include/QtWidgets/qsizepolicy.h \
   /usr/local/include/QtGui/qcursor.h /usr/local/include/QtGui/qbitmap.h \
-  /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/EWIEGA46WW/../../../NetworkClient.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/EWIEGA46WW/../../../NetworkClient.h \
   /usr/local/lib/QtCore.framework/Headers/QObject \
   /usr/local/lib/QtCore.framework/Headers/qobject.h \
   /usr/local/lib/QtNetwork.framework/Headers/QSslSocket \
@@ -1146,8 +1146,8 @@ CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o: \
   /usr/local/include/QtCore/qtmocconstants.h \
   /usr/local/include/QtCore/q20algorithm.h \
   /usr/local/include/QtCore/q23type_traits.h \
-  /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/EWIEGA46WW/moc_MainWindow.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/EWIEGA46WW/../../../MainWindow.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/EWIEGA46WW/moc_MainWindow.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/EWIEGA46WW/../../../MainWindow.h \
   /usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
   /usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /usr/local/include/QtWidgets/qtabwidget.h \
@@ -1169,4 +1169,4 @@ CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o: \
   /usr/local/include/QtWidgets/qstyle.h \
   /usr/local/include/QtWidgets/qtabbar.h \
   /usr/local/include/QtWidgets/qrubberband.h \
-  /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/EWIEGA46WW/moc_NetworkClient.cpp
+  /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/EWIEGA46WW/moc_NetworkClient.cpp

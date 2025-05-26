@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/paul/ENCCHAT/ECHAT/client
+CMAKE_SOURCE_DIR = /Users/paul/ENCCHAT/ECHAT/client_mac
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/paul/ENCCHAT/ECHAT/client/build
+CMAKE_BINARY_DIR = /Users/paul/ENCCHAT/ECHAT/client_mac/build
 
 # Utility rule file for echatclient_autogen_timestamp_deps.
 
@@ -81,6 +81,6 @@ CMakeFiles/echatclient_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/echatclient_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/echatclient_autogen_timestamp_deps.dir/depend:
-	cd /Users/paul/ENCCHAT/ECHAT/client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/paul/ENCCHAT/ECHAT/client /Users/paul/ENCCHAT/ECHAT/client /Users/paul/ENCCHAT/ECHAT/client/build /Users/paul/ENCCHAT/ECHAT/client/build /Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/echatclient_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/paul/ENCCHAT/ECHAT/client_mac/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/paul/ENCCHAT/ECHAT/client_mac /Users/paul/ENCCHAT/ECHAT/client_mac /Users/paul/ENCCHAT/ECHAT/client_mac/build /Users/paul/ENCCHAT/ECHAT/client_mac/build /Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/echatclient_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/echatclient_autogen_timestamp_deps.dir/depend
 

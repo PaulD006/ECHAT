@@ -890,22 +890,22 @@ echatclient_autogen/timestamp: \
 	/Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_list.h \
 	/Library/Developer/CommandLineTools/usr/lib/clang/16/include/limits.h \
 	/Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
-	/Users/paul/ENCCHAT/ECHAT/client/CMakeLists.txt \
-	/Users/paul/ENCCHAT/ECHAT/client/Crypto.cpp \
-	/Users/paul/ENCCHAT/ECHAT/client/Crypto.h \
-	/Users/paul/ENCCHAT/ECHAT/client/LoginDialog.cpp \
-	/Users/paul/ENCCHAT/ECHAT/client/LoginDialog.h \
-	/Users/paul/ENCCHAT/ECHAT/client/MainWindow.cpp \
-	/Users/paul/ENCCHAT/ECHAT/client/MainWindow.h \
-	/Users/paul/ENCCHAT/ECHAT/client/NetworkClient.cpp \
-	/Users/paul/ENCCHAT/ECHAT/client/NetworkClient.h \
-	/Users/paul/ENCCHAT/ECHAT/client/Storage.cpp \
-	/Users/paul/ENCCHAT/ECHAT/client/Storage.h \
-	/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/4.0.2/CMakeCCompiler.cmake \
-	/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake \
-	/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/4.0.2/CMakeSystem.cmake \
-	/Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/moc_predefs.h \
-	/Users/paul/ENCCHAT/ECHAT/client/main.cpp \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/CMakeLists.txt \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.cpp \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.h \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.cpp \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.h \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.cpp \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.h \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.cpp \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.h \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/Storage.cpp \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/Storage.h \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/4.0.2/CMakeCCompiler.cmake \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/4.0.2/CMakeSystem.cmake \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/moc_predefs.h \
+	/Users/paul/ENCCHAT/ECHAT/client_mac/main.cpp \
 	/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QByteArray \
 	/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QFlags \
 	/usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QObject \

@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/paul/ENCCHAT/ECHAT/client
+CMAKE_SOURCE_DIR = /Users/paul/ENCCHAT/ECHAT/client_mac
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/paul/ENCCHAT/ECHAT/client/build
+CMAKE_BINARY_DIR = /Users/paul/ENCCHAT/ECHAT/client_mac/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/echatclient.dir/depend.make
@@ -71,9 +71,9 @@ include CMakeFiles/echatclient.dir/flags.make
 
 echatclient_autogen/timestamp: /usr/local/share/qt/libexec/moc
 echatclient_autogen/timestamp: CMakeFiles/echatclient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target echatclient"
-	/usr/local/bin/cmake -E cmake_autogen /Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/echatclient_autogen.dir/AutogenInfo.json ""
-	/usr/local/bin/cmake -E touch /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target echatclient"
+	/usr/local/bin/cmake -E cmake_autogen /Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/echatclient_autogen.dir/AutogenInfo.json ""
+	/usr/local/bin/cmake -E touch /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/timestamp
 
 CMakeFiles/echatclient.dir/codegen:
 .PHONY : CMakeFiles/echatclient.dir/codegen
@@ -81,100 +81,100 @@ CMakeFiles/echatclient.dir/codegen:
 CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o: CMakeFiles/echatclient.dir/flags.make
 CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o: echatclient_autogen/mocs_compilation.cpp
 CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o: CMakeFiles/echatclient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o -MF CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o -MF CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/mocs_compilation.cpp
 
 CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/mocs_compilation.cpp > CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/mocs_compilation.cpp > CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/mocs_compilation.cpp -o CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/mocs_compilation.cpp -o CMakeFiles/echatclient.dir/echatclient_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/echatclient.dir/main.cpp.o: CMakeFiles/echatclient.dir/flags.make
-CMakeFiles/echatclient.dir/main.cpp.o: /Users/paul/ENCCHAT/ECHAT/client/main.cpp
+CMakeFiles/echatclient.dir/main.cpp.o: /Users/paul/ENCCHAT/ECHAT/client_mac/main.cpp
 CMakeFiles/echatclient.dir/main.cpp.o: CMakeFiles/echatclient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/echatclient.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/main.cpp.o -MF CMakeFiles/echatclient.dir/main.cpp.o.d -o CMakeFiles/echatclient.dir/main.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/echatclient.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/main.cpp.o -MF CMakeFiles/echatclient.dir/main.cpp.o.d -o CMakeFiles/echatclient.dir/main.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client_mac/main.cpp
 
 CMakeFiles/echatclient.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/echatclient.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client/main.cpp > CMakeFiles/echatclient.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client_mac/main.cpp > CMakeFiles/echatclient.dir/main.cpp.i
 
 CMakeFiles/echatclient.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/echatclient.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client/main.cpp -o CMakeFiles/echatclient.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client_mac/main.cpp -o CMakeFiles/echatclient.dir/main.cpp.s
 
 CMakeFiles/echatclient.dir/LoginDialog.cpp.o: CMakeFiles/echatclient.dir/flags.make
-CMakeFiles/echatclient.dir/LoginDialog.cpp.o: /Users/paul/ENCCHAT/ECHAT/client/LoginDialog.cpp
+CMakeFiles/echatclient.dir/LoginDialog.cpp.o: /Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.cpp
 CMakeFiles/echatclient.dir/LoginDialog.cpp.o: CMakeFiles/echatclient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/echatclient.dir/LoginDialog.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/LoginDialog.cpp.o -MF CMakeFiles/echatclient.dir/LoginDialog.cpp.o.d -o CMakeFiles/echatclient.dir/LoginDialog.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client/LoginDialog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/echatclient.dir/LoginDialog.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/LoginDialog.cpp.o -MF CMakeFiles/echatclient.dir/LoginDialog.cpp.o.d -o CMakeFiles/echatclient.dir/LoginDialog.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.cpp
 
 CMakeFiles/echatclient.dir/LoginDialog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/echatclient.dir/LoginDialog.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client/LoginDialog.cpp > CMakeFiles/echatclient.dir/LoginDialog.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.cpp > CMakeFiles/echatclient.dir/LoginDialog.cpp.i
 
 CMakeFiles/echatclient.dir/LoginDialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/echatclient.dir/LoginDialog.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client/LoginDialog.cpp -o CMakeFiles/echatclient.dir/LoginDialog.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client_mac/LoginDialog.cpp -o CMakeFiles/echatclient.dir/LoginDialog.cpp.s
 
 CMakeFiles/echatclient.dir/MainWindow.cpp.o: CMakeFiles/echatclient.dir/flags.make
-CMakeFiles/echatclient.dir/MainWindow.cpp.o: /Users/paul/ENCCHAT/ECHAT/client/MainWindow.cpp
+CMakeFiles/echatclient.dir/MainWindow.cpp.o: /Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.cpp
 CMakeFiles/echatclient.dir/MainWindow.cpp.o: CMakeFiles/echatclient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/echatclient.dir/MainWindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/MainWindow.cpp.o -MF CMakeFiles/echatclient.dir/MainWindow.cpp.o.d -o CMakeFiles/echatclient.dir/MainWindow.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client/MainWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/echatclient.dir/MainWindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/MainWindow.cpp.o -MF CMakeFiles/echatclient.dir/MainWindow.cpp.o.d -o CMakeFiles/echatclient.dir/MainWindow.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.cpp
 
 CMakeFiles/echatclient.dir/MainWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/echatclient.dir/MainWindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client/MainWindow.cpp > CMakeFiles/echatclient.dir/MainWindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.cpp > CMakeFiles/echatclient.dir/MainWindow.cpp.i
 
 CMakeFiles/echatclient.dir/MainWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/echatclient.dir/MainWindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client/MainWindow.cpp -o CMakeFiles/echatclient.dir/MainWindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.cpp -o CMakeFiles/echatclient.dir/MainWindow.cpp.s
 
 CMakeFiles/echatclient.dir/NetworkClient.cpp.o: CMakeFiles/echatclient.dir/flags.make
-CMakeFiles/echatclient.dir/NetworkClient.cpp.o: /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.cpp
+CMakeFiles/echatclient.dir/NetworkClient.cpp.o: /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.cpp
 CMakeFiles/echatclient.dir/NetworkClient.cpp.o: CMakeFiles/echatclient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/echatclient.dir/NetworkClient.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/NetworkClient.cpp.o -MF CMakeFiles/echatclient.dir/NetworkClient.cpp.o.d -o CMakeFiles/echatclient.dir/NetworkClient.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/echatclient.dir/NetworkClient.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/NetworkClient.cpp.o -MF CMakeFiles/echatclient.dir/NetworkClient.cpp.o.d -o CMakeFiles/echatclient.dir/NetworkClient.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.cpp
 
 CMakeFiles/echatclient.dir/NetworkClient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/echatclient.dir/NetworkClient.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.cpp > CMakeFiles/echatclient.dir/NetworkClient.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.cpp > CMakeFiles/echatclient.dir/NetworkClient.cpp.i
 
 CMakeFiles/echatclient.dir/NetworkClient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/echatclient.dir/NetworkClient.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.cpp -o CMakeFiles/echatclient.dir/NetworkClient.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.cpp -o CMakeFiles/echatclient.dir/NetworkClient.cpp.s
 
 CMakeFiles/echatclient.dir/Crypto.cpp.o: CMakeFiles/echatclient.dir/flags.make
-CMakeFiles/echatclient.dir/Crypto.cpp.o: /Users/paul/ENCCHAT/ECHAT/client/Crypto.cpp
+CMakeFiles/echatclient.dir/Crypto.cpp.o: /Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.cpp
 CMakeFiles/echatclient.dir/Crypto.cpp.o: CMakeFiles/echatclient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/echatclient.dir/Crypto.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/Crypto.cpp.o -MF CMakeFiles/echatclient.dir/Crypto.cpp.o.d -o CMakeFiles/echatclient.dir/Crypto.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client/Crypto.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/echatclient.dir/Crypto.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/Crypto.cpp.o -MF CMakeFiles/echatclient.dir/Crypto.cpp.o.d -o CMakeFiles/echatclient.dir/Crypto.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.cpp
 
 CMakeFiles/echatclient.dir/Crypto.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/echatclient.dir/Crypto.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client/Crypto.cpp > CMakeFiles/echatclient.dir/Crypto.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.cpp > CMakeFiles/echatclient.dir/Crypto.cpp.i
 
 CMakeFiles/echatclient.dir/Crypto.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/echatclient.dir/Crypto.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client/Crypto.cpp -o CMakeFiles/echatclient.dir/Crypto.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.cpp -o CMakeFiles/echatclient.dir/Crypto.cpp.s
 
 CMakeFiles/echatclient.dir/Storage.cpp.o: CMakeFiles/echatclient.dir/flags.make
-CMakeFiles/echatclient.dir/Storage.cpp.o: /Users/paul/ENCCHAT/ECHAT/client/Storage.cpp
+CMakeFiles/echatclient.dir/Storage.cpp.o: /Users/paul/ENCCHAT/ECHAT/client_mac/Storage.cpp
 CMakeFiles/echatclient.dir/Storage.cpp.o: CMakeFiles/echatclient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/echatclient.dir/Storage.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/Storage.cpp.o -MF CMakeFiles/echatclient.dir/Storage.cpp.o.d -o CMakeFiles/echatclient.dir/Storage.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client/Storage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/echatclient.dir/Storage.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echatclient.dir/Storage.cpp.o -MF CMakeFiles/echatclient.dir/Storage.cpp.o.d -o CMakeFiles/echatclient.dir/Storage.cpp.o -c /Users/paul/ENCCHAT/ECHAT/client_mac/Storage.cpp
 
 CMakeFiles/echatclient.dir/Storage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/echatclient.dir/Storage.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client/Storage.cpp > CMakeFiles/echatclient.dir/Storage.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/paul/ENCCHAT/ECHAT/client_mac/Storage.cpp > CMakeFiles/echatclient.dir/Storage.cpp.i
 
 CMakeFiles/echatclient.dir/Storage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/echatclient.dir/Storage.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client/Storage.cpp -o CMakeFiles/echatclient.dir/Storage.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/paul/ENCCHAT/ECHAT/client_mac/Storage.cpp -o CMakeFiles/echatclient.dir/Storage.cpp.s
 
 # Object files for target echatclient
 echatclient_OBJECTS = \
@@ -205,7 +205,7 @@ echatclient: /usr/local/lib/QtGui.framework/Versions/A/QtGui
 echatclient: /usr/local/lib/QtCore.framework/Versions/A/QtCore
 echatclient: /usr/local/lib/libcrypto.dylib
 echatclient: CMakeFiles/echatclient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable echatclient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable echatclient"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/echatclient.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -217,6 +217,6 @@ CMakeFiles/echatclient.dir/clean:
 .PHONY : CMakeFiles/echatclient.dir/clean
 
 CMakeFiles/echatclient.dir/depend: echatclient_autogen/timestamp
-	cd /Users/paul/ENCCHAT/ECHAT/client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/paul/ENCCHAT/ECHAT/client /Users/paul/ENCCHAT/ECHAT/client /Users/paul/ENCCHAT/ECHAT/client/build /Users/paul/ENCCHAT/ECHAT/client/build /Users/paul/ENCCHAT/ECHAT/client/build/CMakeFiles/echatclient.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/paul/ENCCHAT/ECHAT/client_mac/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/paul/ENCCHAT/ECHAT/client_mac /Users/paul/ENCCHAT/ECHAT/client_mac /Users/paul/ENCCHAT/ECHAT/client_mac/build /Users/paul/ENCCHAT/ECHAT/client_mac/build /Users/paul/ENCCHAT/ECHAT/client_mac/build/CMakeFiles/echatclient.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/echatclient.dir/depend
 

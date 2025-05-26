@@ -1,6 +1,6 @@
 CMakeFiles/echatclient.dir/MainWindow.cpp.o: \
-  /Users/paul/ENCCHAT/ECHAT/client/MainWindow.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/MainWindow.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.h \
   /usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
   /usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /usr/local/include/QtWidgets/qtwidgetsglobal.h \
@@ -1138,7 +1138,7 @@ CMakeFiles/echatclient.dir/MainWindow.cpp.o: \
   /usr/local/include/QtWidgets/qstyle.h \
   /usr/local/include/QtWidgets/qtabbar.h \
   /usr/local/include/QtWidgets/qrubberband.h \
-  /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.h \
   /usr/local/lib/QtCore.framework/Headers/QObject \
   /usr/local/lib/QtCore.framework/Headers/qobject.h \
   /usr/local/lib/QtNetwork.framework/Headers/QSslSocket \
@@ -1179,8 +1179,8 @@ CMakeFiles/echatclient.dir/MainWindow.cpp.o: \
   /usr/local/include/QtWidgets/qboxlayout.h \
   /usr/local/include/QtWidgets/qgridlayout.h \
   /usr/local/lib/QtWidgets.framework/Headers/QHBoxLayout \
-  /Users/paul/ENCCHAT/ECHAT/client/Crypto.h \
-  /Users/paul/ENCCHAT/ECHAT/client/Storage.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Storage.h \
   /usr/local/lib/QtWidgets.framework/Headers/QMenuBar \
   /usr/local/lib/QtWidgets.framework/Headers/qmenubar.h \
   /usr/local/include/QtWidgets/qmenu.h \

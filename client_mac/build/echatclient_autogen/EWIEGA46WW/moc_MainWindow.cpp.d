@@ -1,5 +1,5 @@
-/Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/EWIEGA46WW/moc_MainWindow.cpp: /Users/paul/ENCCHAT/ECHAT/client/MainWindow.h \
-  /Users/paul/ENCCHAT/ECHAT/client/build/echatclient_autogen/moc_predefs.h \
+/Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/EWIEGA46WW/moc_MainWindow.cpp: /Users/paul/ENCCHAT/ECHAT/client_mac/MainWindow.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/build/echatclient_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -891,7 +891,7 @@
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_list.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/limits.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
-  /Users/paul/ENCCHAT/ECHAT/client/NetworkClient.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/NetworkClient.h \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QByteArray \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QFlags \
   /usr/local/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QObject \

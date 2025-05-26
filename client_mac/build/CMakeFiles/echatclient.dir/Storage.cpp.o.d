@@ -1,6 +1,6 @@
 CMakeFiles/echatclient.dir/Storage.cpp.o: \
-  /Users/paul/ENCCHAT/ECHAT/client/Storage.cpp \
-  /Users/paul/ENCCHAT/ECHAT/client/Storage.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Storage.cpp \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Storage.h \
   /usr/local/lib/QtCore.framework/Headers/QString \
   /usr/local/lib/QtCore.framework/Headers/qstring.h \
   /usr/local/include/QtCore/qchar.h /usr/local/include/QtCore/qglobal.h \
@@ -1166,6 +1166,6 @@ CMakeFiles/echatclient.dir/Storage.cpp.o: \
   /usr/local/include/QtCore/qjsondocument.h \
   /usr/local/lib/QtCore.framework/Headers/QJsonObject \
   /usr/local/lib/QtCore.framework/Headers/qjsonobject.h \
-  /Users/paul/ENCCHAT/ECHAT/client/Crypto.h \
+  /Users/paul/ENCCHAT/ECHAT/client_mac/Crypto.h \
   /usr/local/lib/QtCore.framework/Headers/QByteArray \
   /usr/local/lib/QtCore.framework/Headers/qbytearray.h
