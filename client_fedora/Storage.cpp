@@ -8,7 +8,7 @@
 #include <QJsonObject>
 #include "Crypto.h"
 
-namespace Storage{
+
 static QString s_baseDir;
 
 
@@ -157,5 +157,4 @@ QString Storage::getContactPublicKey(const QString &user) {
         if(c.username == user)
             return c.publicKeyPem;
     return {};
-}
 }
