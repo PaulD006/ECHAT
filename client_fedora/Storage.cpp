@@ -5,6 +5,7 @@
 #include <QJsonObject>
 #include <QStandardPaths>
 #include <QSettings>
+#include <QJsonArray>
 
 namespace Storage {
 
