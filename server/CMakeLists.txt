@@ -16,6 +16,7 @@ add_executable(echatserver
     UserDB.cpp
     SyncService.cpp
     AdminConsole.cpp
+    ConfigUtil.cpp
 )
 
 

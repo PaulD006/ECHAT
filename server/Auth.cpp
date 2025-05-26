@@ -12,6 +12,23 @@
 static std::vector<unsigned char> fromHex(const std::string& hex);
 static std::unordered_set<std::string> validCodes;
 static std::mutex codeMutex;
+static const std::string regCodeFile = "regcodes.txt";
+
+// helper: read all lines into validCodes
+static void loadCodes() {
+    std::ifstream in(regCodeFile);
+    std::string line;
+    while(std::getline(in, line)) {
+        if(line.empty() || line[0]=='#') continue;
+        validCodes.insert(line);
+    }
+}
+
+// append one code to the file
+static void persistCode(const std::string &code) {
+    std::ofstream out(regCodeFile, std::ios::app);
+    out << code << "\n";
+}
 
 // Helper: hex-encode a buffer
 static std::string toHex(const unsigned char* buf, size_t len) {
@@ -73,8 +90,11 @@ void Auth::invalidateRegCode(const std::string& /*code*/) {
 }
 
 void Auth::addRegCode(const std::string& code) {
-    std::lock_guard<std::mutex> lg(codeMutex);
-    validCodes.insert(code);
+    {
+        std::lock_guard<std::mutex> lg(codeMutex);
+        validCodes.insert(code);
+    }
+    persistCode(code);
 }
 
 static std::vector<unsigned char> fromHex(const std::string& hex) {

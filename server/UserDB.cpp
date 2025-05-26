@@ -23,6 +23,22 @@ bool UserDB::verifyUser(const std::string& user, const std::string& pwd) {
     return Auth::verifyPassword(pwd, it->second.hash);
 }
 
+bool UserDB::disableUser(const std::string& user) {
+    std::lock_guard<std::mutex> lk(mtx);
+    auto it = db.find(user);
+    if(it==db.end()) return false;
+    it->second.disabled = true;
+    return true;
+}
+
+bool UserDB::enableUser(const std::string& user) {
+    std::lock_guard<std::mutex> lk(mtx);
+    auto it = db.find(user);
+    if(it==db.end()) return false;
+    it->second.disabled = false;
+    return true;
+}
+
 std::vector<UserRecord> UserDB::getAllUsers() {
     std::lock_guard<std::mutex> lk(mtx);
     std::vector<UserRecord> v;
