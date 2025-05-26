@@ -17,43 +17,47 @@ static QString configDir() {
     return QDir::homePath() + "/config_echat";
 }
 
-QString exportContact(const QString& peerUser) {
-    // ensure contacts folder exists
-    QDir dir(configDir() + "/contacts");
-    dir.mkpath(".");
+namespace Storage {
 
-    // path for the new .contact
-    QString path = dir.filePath(peerUser + ".contact");
+    QString exportContact(const QString& peerUser) {
+        // ensure contacts folder exists
+        QDir dir(configDir() + "/contacts");
+        dir.mkpath(".");
+    
+        // path for the new .contact
+        QString path = dir.filePath(peerUser + ".contact");
+    
+        // grab the raw AES key you generated earlier:
+        QByteArray aesKey = getConversationKey(peerUser);
+    
+        // write JSON { "user": "...", "key": "<hex>" }
+        QJsonObject obj;
+        obj["user"] = peerUser;
+        obj["key"]  = QString(aesKey.toHex());
+        QFile f(path);
+        f.open(QIODevice::WriteOnly);
+        f.write(QJsonDocument(obj).toJson());
+        f.close();
+    
+        return path;
+    }
+    
+    QString importContact(const QString& filename) {
+        QFile f(filename);
+        if (!f.open(QIODevice::ReadOnly)) return QString();
+        auto doc = QJsonDocument::fromJson(f.readAll());
+        f.close();
+    
+        auto obj = doc.object();
+        QString peer = obj["user"].toString();
+        QByteArray key = QByteArray::fromHex(obj["key"].toString().toUtf8());
+    
+        // store that key for later chats:
+        saveConversationKey(peer, key);
+    
+        return peer;
+    }
 
-    // grab the raw AES key you generated earlier:
-    QByteArray aesKey = getConversationKey(peerUser);
-
-    // write JSON { "user": "...", "key": "<hex>" }
-    QJsonObject obj;
-    obj["user"] = peerUser;
-    obj["key"]  = QString(aesKey.toHex());
-    QFile f(path);
-    f.open(QIODevice::WriteOnly);
-    f.write(QJsonDocument(obj).toJson());
-    f.close();
-
-    return path;
-}
-
-QString importContact(const QString& filename) {
-    QFile f(filename);
-    if (!f.open(QIODevice::ReadOnly)) return QString();
-    auto doc = QJsonDocument::fromJson(f.readAll());
-    f.close();
-
-    auto obj = doc.object();
-    QString peer = obj["user"].toString();
-    QByteArray key = QByteArray::fromHex(obj["key"].toString().toUtf8());
-
-    // store that key for later chats:
-    saveConversationKey(peer, key);
-
-    return peer;
 }
 
 /// Saves the raw AES key for peerUser into config_echat/keys/peerUser.key
