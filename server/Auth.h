@@ -7,4 +7,5 @@ namespace Auth {
     bool validateRegCode(const std::string& code);
     void invalidateRegCode(const std::string& code);
     void addRegCode(const std::string& code);
+    std::vector<std::string> listCodes();
 }

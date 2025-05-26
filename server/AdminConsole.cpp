@@ -5,6 +5,8 @@
 #include <iostream>
 #include <random>
 #include <fstream>
+#include <sstream>
+#include <iomanip>
 #include <string>
 
 static std::string masterKey;
@@ -15,14 +17,7 @@ void AdminConsole::loadMasterKey(const std::string& path) {
     std::getline(in, masterKey);
 }
 
-void ServerApp::startServices() {
-    AdminConsole::authenticate();
-    Auth::loadCodes();             // <-- load from file
-    AdminConsole::run();           // <-- REPL for gen/list/exit
-    // then launch HttpRegistration, SyncService...
-    HttpRegistration::start();
-    SyncService::instance().start();
-}
+
 
 void AdminConsole::authenticate() {
     std::cout << "Admin console requires master key." << std::endl;

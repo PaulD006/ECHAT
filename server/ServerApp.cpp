@@ -16,11 +16,11 @@ void ServerApp::loadAdminKey(const std::string& path) {
 }
 
 void ServerApp::startServices() {
-    // First authenticate admin for console
     AdminConsole::authenticate();
-    // Launch HTTP registration service (TLS)
+    Auth::loadCodes();             // <-- load from file
+    AdminConsole::run();           // <-- REPL for gen/list/exit
+    // then launch HttpRegistration, SyncService...
     HttpRegistration::start();
-    // Launch database sync and client-listener
     SyncService::instance().start();
 }
 
